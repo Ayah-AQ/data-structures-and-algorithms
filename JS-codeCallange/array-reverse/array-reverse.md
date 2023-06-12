@@ -59,6 +59,18 @@ head  1  Null return 1<br/>
 [6,5,4,3,2,1]
 
 </div>
+<div style="float: right; width: 50%;">
+<h1> pseudocode </h1>
+ <pre><code>
+function reverseArray(arr)
+    Create an empty array called reversedArr
+    
+    For i = length(arr) - 1 to 0 (decrementing i by 1 in each iteration)
+        Append arr[i] to reversedArr
+    
+    Return reversedArr
+ </pre></code>
+</div>
 
 <div style="float: right; width: 50%;">
 <h1> Step through </h1>
@@ -85,3 +97,12 @@ head  1  Null return 1<br/>
         </tbody>
     </table>
 </div>
+_______________________
+
+## Whiteboard screenshoot
+<img src='../Assests/Screenshot%202023-06-12%20at%208.13.50%20PM.png'/>
+________________
+
+## Testing
+The provided code defines a function called reverseArray that is intended to reverse the order of elements in an array. When this function is called with an array as input, it is expected to return a new array with the elements in reversed order. However, without executing the code, the actual output cannot be determined, but the expected output is a reversed array.
+
