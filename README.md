@@ -24,4 +24,4 @@ To run your tests
 -------------
 | # | Name board |  
 |---|------------|
-|1  | [Reversable Array](./JS-codeChallange/array-reverse.md)|
+|1  | [Reversable Array](./JS-codeCallange/array-reverse/array-reverse.md)|
