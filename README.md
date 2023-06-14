@@ -25,3 +25,4 @@ To run your tests
 | # | Name board |  
 |---|------------|
 |1  | [Reversable Array](./JS-codeCallange/array-reverse/array-reverse.md)|
+|2  | [Insert Shif Array](./JS-codeCallange/insertShiftArray/insertShiftArray.md)|
