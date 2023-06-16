@@ -106,7 +106,7 @@ head 1 -> 2 -> 3 -> middle -> 4 -> 5 Null, value 7 return 7 <br/>
 ------------------------
 
  ## Whiteboard screenshoot 
-<img src='../Assests/Screenshot%202023-06-14%20073156.png'/>
+<img src='../Assests/Screenshot%202023-06-14%20073157.png'/>
 
 ------------------------
 
