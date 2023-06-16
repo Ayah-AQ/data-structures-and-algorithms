@@ -23,11 +23,11 @@
 <h1> Test Cases </h1>
 Given -> [2, 4, 5, -8],6 ,return ->  [2, 4, 5, 6, -8] / even length case
 <br/>
-Given -> [42, 8, 15, 23, 42],16 ,return -> [42, 8, 15, 16, 23, 42] / odd length case
+Given -> [42, 8, 15, 23, 42],16 ,return -> [42, 8, 16, 15, 23, 42] / odd length case
 <br/>
 Given -> [ ],5 return ->  [5] / empty array case
 <br/>
-Given -> [1, 2, 3, 4, 5] return ->  [1, 2, 3, Null, 4, 5] / if no value
+Given -> [1, 2, 3, 4, 5] return ->  [1, 2, Null, 3, 4, 5] / if no value
 <br/>
 Given -> 10, return ->  [10] / no array case
 </div>
@@ -101,54 +101,10 @@ head 1 -> 2 -> 3 -> middle -> 4 -> 5 Null, value 7 return 7 <br/>
             </tr>
         </tbody>
     </table>
-</div>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
+</div
+ 
 ------------------------
+
  ## Whiteboard screenshoot 
 <img src='../Assests/Screenshot%202023-06-14%20073156.png'/>
 
