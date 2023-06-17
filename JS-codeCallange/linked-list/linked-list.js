@@ -1,51 +1,62 @@
 'use strict';
 
-/* eslint-disable no-constant-condition */
 class Node {
-  constructor(value, next) {
+  constructor(value, next = null) {
     this.value = value;
-    this.next = next || null;
+    this.next = next;
   }
 }
 
-class Linkedlist {
+class LinkedList {
   constructor() {
     this.head = null;
   }
-  insert(val) {
-    if(this.head === null) {
-      this.head = new Node(val);
+
+  insert(value) {
+    if (this.head === null) {
+      this.head = new Node(value);
     } else {
-      this.head = new Node(val, this.head);
+      const newNode = new Node( value, this.head);
+      this.head = newNode;
     }
   }
-  includes(val) {
+
+  includes(value) {
     let currentNode = this.head;
-    while(true) {
-      console.log(currentNode.value);
-      if(currentNode.value === val) {
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
         return true;
-      } else {
-        currentNode = currentNode.next;
       }
-      if (currentNode === null) {
-        return false;
-      }
-    }
-  }
-  toString() {
-    let newArr = [];
-    let currentNode = this.head;
-    while(true) {
-      newArr.push(`{${currentNode.value}}`);
       currentNode = currentNode.next;
-      if (currentNode === null) {
-        newArr.push('NULL');
-        break;
-      }
     }
-    return newArr.join(' -> ');
+    return false;
+  }
+
+  toString() {
+    if (this.head === null) {
+      return 'NULL';
+    }
+    let result = '';
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      result += `{ ${currentNode.value} } -> `;
+      currentNode = currentNode.next;
+    }
+    result += 'NULL';
+    return result;
   }
 }
 
-module.exports = Linkedlist;
+let LinkedLst= new LinkedList()
+LinkedLst.insert(50)
+LinkedLst.insert(40)
+LinkedLst.insert(20)
+
+
+LinkedLst.toString()
+
+
+
+
+console.log(LinkedLst)
+module.exports = LinkedList;
