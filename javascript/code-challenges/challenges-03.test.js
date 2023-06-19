@@ -81,6 +81,7 @@ const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
   var result = arr.filter(function(element) {
     return !forbiddenValues.includes(element);
+    
   });
 
   return result;
