@@ -26,3 +26,6 @@ To run your tests
 |---|------------|
 |1  | [Reversable Array](./JS-codeCallange/array-reverse/array-reverse.md)|
 |2  | [Insert Shif Array](./JS-codeCallange/insertShiftArray/insertShiftArray.md)|
+|3  | [Linked list ](./JS-codeCallange/linked-list/linked-list.md)|
+|4  | [Array binary search](./JS-codeCallange/array-binary-search/array-binary-search.md)|
+|5  | [Fibbonacci](./JS-codeCallange/Febunacci/Feb.md)|
