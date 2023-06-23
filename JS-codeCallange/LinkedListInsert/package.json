@@ -1,0 +1,13 @@
+{
+  "name": "linkedlistinsert",
+  "version": "1.0.0",
+  "main": "Insertation.js",
+  "scripts": {
+    "test": "jest  --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
