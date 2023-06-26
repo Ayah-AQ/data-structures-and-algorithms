@@ -29,4 +29,5 @@ To run your tests
 |3  | [Linked list ](./JS-codeCallange/linked-list/linked-list.md)|
 |4  | [Array binary search](./JS-codeCallange/array-binary-search/array-binary-search.md)|
 |5  | [Fibbonacci](./JS-codeCallange/Febunacci/Feb.md)|
-|4  | [linked-list-insertions](./JS-codeCallange/LinkedListInsert/Insertation.md)|
+|6 | [linked-list-insertions](./JS-codeCallange/LinkedListInsert/Insertation.md)|
+|8  | [linked-list-Kth](./JS-codeCallange/linked-list-kth/index.md)|
