@@ -31,3 +31,4 @@ To run your tests
 |5  | [Fibbonacci](./JS-codeCallange/Febunacci/Feb.md)|
 |6 | [linked-list-insertions](./JS-codeCallange/LinkedListInsert/Insertation.md)|
 |8  | [linked-list-Kth](./JS-codeCallange/linked-list-kth/index.md)|
+|9  | [linked-list-zip](./JS-codeCallange/linked-list-zip/linked-list-zip.md)|
