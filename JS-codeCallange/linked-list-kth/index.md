@@ -18,14 +18,16 @@
 <h1> Algorithm </h1>
 
 <ol>
-<li>Start by initializing two pointers, slow and fast, to the head of the linked list.</li>
-<li>Iterate fast pointer k times, moving it k nodes ahead of slow. If fast reaches the end of the list before completing k iterations, throw an exception indicating that k is larger than the size of the linked list.</li>
-<li>Move both slow and fast pointers simultaneously until fast reaches the end of the linked list (i.e., fast.next is null).</li>
-<li>At this point, the slow pointer will be pointing to the kth node from the end of the linked list.</li>
-<li>Return the value of the node pointed to by slow.</li>
+<li>Initialize variables: count to track the current position in the linked list, current to traverse the list, and kthNode to store the kth node from the end.</li>
+<li>Traverse the linked list using a while loop, continuing until current reaches the end (i.e., current becomes null).</li>
+<li>Inside the loop, check if the current position count matches the desired kth position. If it does, assign the head as the initial kth node</li>
+<li>Inside the loop, check if the current position count matches the desired kth position. If it does, assign the head as the initial kth node </li>
+<li>Increment count and move current to the next node in each iteration.</li>
+<li>After the loop ends, check if kthNode is still null. If it is, it means k is larger than the size of the linked list, so throw an error.</li>
+<li>Return the value of the kth node (kthNode.value).</li>
 </ol>
 </div>
-<div style="float: right; width: 45%;">
+<div style="float: left; width: 45%;">
 <h1> Test Cases </h1>
 
 head -> {1} -> {3} -> {8} -> {2} -> X , arg -> 0 , return -> 2 // last element index 0 from the end <br/>
@@ -34,7 +36,7 @@ head -> {1} -> {3} -> {8} -> {2} -> X , arg -> 6 , return -> error // there is n
 
 </div>
 
-<div style="float: left; width: 40%;">
+<div style="float: right; width: 40%;">
 <h1> Visiulization </h1> 
 fast (both pointing to the head)<br/>
 {{1}} -> 3 -> 8 -> 2 -> X , slow <br/>
@@ -47,7 +49,7 @@ move both from there position untill reach the last element<br/>
 return value pointed by slow 
 
 </div>
-<div style="float: right; width: 45%;">
+<div style="float: left; width: 45%;">
 <h1> Code </h1>
  <pre><code>
 class LinkedList {
@@ -55,37 +57,46 @@ class LinkedList {
     this.head = null;
   }
 
-
   kthFromEnd(k) {
     if (this.head === null) {
-      throw new Error("LinkedList is empty.");}
-
-    let slow = this.head;
-    let fast = this.head;
-
-    for (let i = 0; i < k; i++) {
-      if (fast === null) {
-        throw new Error("k is larger than the size of the LinkedList.");}
-      fast = fast.next;}
-    while (fast.next !== null) {
-      slow = slow.next;
-      fast = fast.next;}
-
-    return slow.value;}
+      throw new Error("LinkedList is empty.");
     }
+
+    let count = 0;
+    let current = this.head;
+    let kthNode = null;
+
+    while (current !== null) {
+      if (count === k) {
+        kthNode = this.head;
+      } else if (count > k) {
+        kthNode = kthNode.next;
+      }
+      count++;
+      current = current.next;
+    }
+
+    if (kthNode === null) {
+      throw new Error("k is larger than the size of the LinkedList.");
+    }
+
+    return kthNode.value;
+  }
+}
+
  </pre></code>
 </div>
 
 
 
-<div style="float: left; width: 45%;">
+<div style="float: right; width: 45%;">
 <h1> BigO </h1>
  time complexity of this algorithm is O(n) </br>
  space complexity of this algorithm is O(1)
 </div>
 _______________________
 
-## Whiteboard screenshoot
+ ## Whiteboard screenshoot
 <img src='../Assests/Screenshot%202023-06-26%20171807.png'/>
 ________________
 
