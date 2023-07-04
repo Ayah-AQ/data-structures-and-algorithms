@@ -122,13 +122,13 @@ function zipLists(list1, list2) {
  space complexity of this algorithm is O(1)
 </div>
 
-_______________________
+<!-- _______________________ -->
 
-## Whiteboard screenshoot
+<!-- ## Whiteboard screenshoot
 <img src='../Assests/Screenshot%202023-07-03%20150204.png'/>
-________________
+________________ -->
 
-## Testing
+<!-- ## Testing
 ```
 The zipLists function has been tested with various cases and works correctly. It has a time complexity of O(n) and a space complexity of O(1). Overall, the function is both efficient and reliable.
-```
+``` -->
