@@ -59,7 +59,7 @@ class List {
   }
 }
 
-function getNthNodeFromEnd(head, n) {
+function getNodeFromEnd(head, n) {
   if (head === null) {
     return null;
   }

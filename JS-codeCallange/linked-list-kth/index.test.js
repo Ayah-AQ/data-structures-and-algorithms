@@ -1,30 +1,37 @@
-const LinkedList = require('./index');
+const {LinkedList} = require('./index')
+const {getNodeFromEnd} = require('./index')
 
-describe('LinkedList', () => {
-  describe('kthFromEnd', () => {
-    test('should return the kth element from the end of the LinkedList', () => {
-      const linkedList = new LinkedList();
-      linkedList.head = { value: 1, next: null };
-      linkedList.head.next = { value: 2, next: null };
-      linkedList.head.next.next = { value: 3, next: null };
-      linkedList.head.next.next.next = { value: 4, next: null };
-      linkedList.head.next.next.next.next = { value: 5, next: null };
 
-      expect(linkedList.kthFromEnd(2)).toBe(3);
-      expect(linkedList.kthFromEnd(0)).toBe(5);
-    });
+describe('getNodeFromEnd', () => {
+  test('returns the node from the end of the linked list', () => {
+    // Create a linked list with nodes containing numbers 1, 2, 3, 4, 5
+    const head = new LinkedList(1);
+    let node = head;
+    for (let i = 2; i <= 5; i++) {
+      node.next = new LinkedList(i);
+      node = node.next;
+    }
 
-    test('should throw an error if the LinkedList is empty', () => {
-      const linkedList = new LinkedList();
+    // Test for getting nodes from the end
+    expect(getNodeFromEnd(head, 1).data).toBe(5); // Expect the last node (5)
+    expect(getNodeFromEnd(head, 2).data).toBe(4); // Expect the second last node (4)
+    expect(getNodeFromEnd(head, 5).data).toBe(1); // Expect the first node (1)
+  });
 
-      expect(() => linkedList.kthFromEnd(2)).toThrow('LinkedList is empty.');
-    });
+  test('throws an error for invalid values of n', () => {
+    const head = new LinkedList(1); // Create a linked list with a single node
 
-    test('should throw an error if k is larger than the size of the LinkedList', () => {
-      const linkedList = new LinkedList();
-      linkedList.head = { value: 1, next: null };
+    // Test for negative and zero values of n
+    expect(() => getNodeFromEnd(head, -1)).toThrowError('Invalid value: n = -1');
+    expect(() => getNodeFromEnd(head, 0)).toThrowError('Invalid value: n = 0');
 
-      expect(() => linkedList.kthFromEnd(2)).toThrow('k is larger than the size of the LinkedList.');
-    });
+    // Test for n greater than the number of nodes in the linked list
+    expect(() => getNodeFromEnd(head, 2)).toThrowError('2 is greater than the number in the list');
+  });
+
+  test('returns null for an empty linked list', () => {
+    // Test for an empty linked list
+    expect(getNodeFromEnd(null, 1)).toBeNull();
   });
 });
+
