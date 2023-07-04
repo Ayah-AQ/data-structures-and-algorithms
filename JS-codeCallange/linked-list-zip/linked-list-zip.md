@@ -20,18 +20,15 @@
 <h1> Algorithm </h1>
 
 <ol>
-<li>Check if either list1 or list2 is null. If one of them is null, return the other list.</li>
-<li>Set the head variable to list1, as it will be the head of the zipped list.</li>
-<li>Initialize current1 as the next node after the head of list1.</li>
-<li>Initialize current2 as the head of list2.</li>
-<li>Iterate while both current1 and current2 are not null:</li>
+<li>Create a dummy head node and initialize a tail pointer to track the end of the merged list.</li>
+<li>Iterate while both input lists are not null:</li>
 <ul>
-<li>Create temporary variables temp1 and temp2 to store the next nodes of current1 and current2, respectively.</li>
-<li>Update the next pointer of current1 to point to current2.</li>
-<li>Update the next pointer of current2 to point to temp1.</li>
-<li>Move current1 to temp1 and current2 to temp2</li>
+<li>Append the node from the first list to the merged list by setting tail.next to the current node and moving to the next node in the first list.</li>
+<li>Update the tail pointer to the newly appended node.</li>
+<li>Swap the first and second lists</li>
 </ul>
-<li>Return the head of the zipped list.</li>
+<li>If any of the input lists still has remaining nodes, append them to the merged list by setting tail.next to the remaining nodes.</li>
+<li>Return the merged list by skipping the dummy head node and returning its next pointer.</li>
 </ol>
 </div>
 <div style="float: left; width: 45%;">
@@ -91,22 +88,29 @@ function zipLists(list1, list2) {
     return list1;
   }
 
-  let head = list1;
-  let current1 = list1.next;
+  let dummyHead = new Node(null);
+  let tail = dummyHead;
+  let current1 = list1;
   let current2 = list2;
 
   while (current1 && current2) {
-    let temp1 = current1.next;
-    let temp2 = current2.next;
+    tail.next = current1;
+    current1 = current1.next;
+    tail = tail.next;
 
-    current1.next = current2;
-    current2.next = temp1;
-
-    current1 = temp1;
-    current2 = temp2;
+    tail.next = current2;
+    current2 = current2.next;
+    tail = tail.next;
   }
 
-  return head;}
+  if (current1) {
+    tail.next = current1;
+  } else if (current2) {
+    tail.next = current2;
+  }
+
+  return dummyHead.next;
+}
  </pre></code>
 </div>
 
