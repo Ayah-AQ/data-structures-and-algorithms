@@ -1,9 +1,8 @@
 {
-  "name": "stack-and-queue",
+  "name": "stack-queue-animal-shelter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",  
-  "scripts": {
+  "main": "index.js",  "scripts": {
     "test": "jest  --coverage"
   },
   "author": "",
