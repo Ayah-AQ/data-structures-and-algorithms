@@ -129,7 +129,7 @@ function validateBrackets(string) {
 _______________________
 
 ## Whiteboard screenshoot
-<img src='../Assests//Screenshot 2023-07-15 171709.png'/>
+<img src='../Assests/Screenshot 2023-07-15 171709.png'/>
 
 ________________
 
