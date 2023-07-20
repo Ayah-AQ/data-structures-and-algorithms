@@ -39,4 +39,5 @@ class TreeNode {
   }
   module.exports ={
     BinaryTree, TreeNode
+    
   }
