@@ -54,14 +54,16 @@
        1
       / \
      9   2
-    / \   \
-   5   15   4
+     / \   \
+    5   15   4
+
+
 
           none
          /    \
      Fizz      none 
-    /   \         \
-   Buzz  FizzBuzz none
+      /   \         \
+     Buzz  FizzBuzz none
 
 
 </div>
@@ -135,14 +137,10 @@ function fizzBuzzTree(tree) {
  space complexity of this algorithm is O(n)
 </div>
 
-<!-- _______________________ -->
-<!-- 
+_______________________
+
 ## Whiteboard screenshoot
-<img src='../Assests/Screenshot 2023-07-24 180446(1).png'/>
+<img src='../Assests/Screenshot 2023-07-26 183013(1).png'/>
+<img src='../Assests/Screenshot 2023-07-26 183033(2).png'/>
 
-________________
 
-## Testing
-``` -->
-
-```
